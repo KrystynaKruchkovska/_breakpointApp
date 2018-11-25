@@ -11,6 +11,7 @@ import Firebase
 import GoogleSignIn
 import FBSDKLoginKit
 
+
 class AuthVC: UIViewController,GIDSignInUIDelegate, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var facebookBtn: FBSDKLoginButton!
@@ -19,10 +20,9 @@ class AuthVC: UIViewController,GIDSignInUIDelegate, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         //facebookBtn.delegate = self
         //facebookBtn.readPermissions = ["public_profile", "email"]
-        GIDSignIn.sharedInstance().uiDelegate = self
-        //GIDSignIn.sharedInstance().signIn()
-        // Do any additional setup after loading the view.
+        self.setupView()
     }
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -73,6 +73,13 @@ class AuthVC: UIViewController,GIDSignInUIDelegate, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("Did log out of facebook")
+    }
+    
+
+
+    func setupView(){
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
     }
     
 
