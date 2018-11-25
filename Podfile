@@ -11,6 +11,9 @@ target 'breakpoint' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'GoogleSignIn'
+  pod 'Firebase/Auth'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
   pod 'lottie-ios'
 
 

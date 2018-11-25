@@ -887,6 +887,9 @@
                                                 <state key="normal" title="LOGIN WITH FB">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="facebookSignInWasPressed:" destination="qJT-4b-lol" eventType="touchUpInside" id="Pag-uu-Nj6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsF-fp-Scj">
                                                 <rect key="frame" x="0.0" y="123.5" width="303" height="61"/>
@@ -948,7 +951,7 @@
                         <viewLayoutGuide key="safeArea" id="eAr-5v-B99"/>
                     </view>
                     <connections>
-                        <outlet property="facebookSignInWasPressed" destination="DrQ-8k-JJe" id="6YN-xq-CRg"/>
+                        <outlet property="facebookBtn" destination="DrQ-8k-JJe" id="d6O-X4-5eO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhN-pR-kKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
