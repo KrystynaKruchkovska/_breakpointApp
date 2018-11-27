@@ -14,6 +14,7 @@ import GoogleSignIn
 let MAXIMUM_PHOTO_SIZE:Int64 = 1024*1024*10
 
 class MeVC: UIViewController {
+    let imageService = ImageService.instance
     
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var emailLbl: UILabel!
@@ -34,7 +35,6 @@ class MeVC: UIViewController {
         }else{
             hideSpinner()
         }
-        
         setUpProfilePhoto()
     }
     
